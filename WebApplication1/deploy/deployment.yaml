@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: otus
+  name: webapplication1-deployment
+  labels:
+    app: webapplication1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapplication1
+  template:
+    metadata:
+      name: webapplication1
+      labels:
+        app: webapplication1
+    spec:
+      containers:
+        - name: webapplication1
+          image: kuzindiman/otus/webapplication1:latest
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      
