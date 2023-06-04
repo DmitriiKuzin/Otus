@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: webapplication1
-          image: kuzindiman/otus/webapplication1:latest
+          image: kuzindiman/webapplication1-amd64:latest
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
       
